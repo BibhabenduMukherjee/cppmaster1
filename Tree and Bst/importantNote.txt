@@ -1,0 +1,60 @@
+inorder traversal of binary tress without recursion
+------------------------------------------------------------
+(Morris Traversal)  (HARD)
+----------------------------------
+
+(i) make current as a root
+(ii) while(current!=NULL)
+      1. if current has no left subtres 
+              --> print (current->data)
+              --> current = current->right
+      2.else 
+           --> set prev as current->left
+          --> find inorder successor (right most node of left subtree)
+            check if-- [1] prev->right == NULL 
+                            then link current with prev->right
+                            move current to current->left
+                  else --[2] set prev->right == NULL
+                            and print (current->data)
+                            move current to current->right
+
+
+YOU ARE READY TO MORRIS TRAVERSAL
+
+_______________________________________________________
+K’th smallest element in BST using O(1) Extra Space (HARD)(given k'th element)
+----------------------------------------------------------------------------
+STEP is same as Morris traversal 
+
+but here (i) while(current!=NULL)
+                 --> if current has no left subtres increass count value by 1
+                 check (count==k) if yes ksmall = current->data;
+                   {no left so in BST current data is 1'st small }
+
+                --> else {same find right most node of left subtree}
+
+               -->  set pre->right = NULL
+                      count ++ ;
+                      check (count==k) if yes ksmall = current->data;
+                      curr = curr->right
+                     
+                      
+                      
+
+finally return ksmall
+           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
