@@ -2,7 +2,7 @@
 using namespace std;
 
 
-
+//do it
 void showAllFactorsOfANUmber(int n){
 
    if(n==1){
