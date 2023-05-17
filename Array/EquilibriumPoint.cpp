@@ -9,6 +9,7 @@ class Solution{
            sum += a[i];
     
         //sum2 is used to store prefix sum.
+        // 
         long long sum2 = 0;
         int ans = -1;
         for (int i = 0; i < n; i++) {
